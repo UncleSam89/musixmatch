@@ -17,6 +17,7 @@ Musixmatch API - https://developer.musixmatch.com
 
 #Further implementation
 
+- Auto layout implementation, currently the game is created on the iPhone 5 screen settings
 - Deezer API implementation in order to reproduce the desired song while playing
 - Sync song and lyrics
 - Graphic design
