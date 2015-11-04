@@ -74,7 +74,7 @@
     else
     {
         
-        splittedText = [s_lyrics componentsSeparatedByCharactersInSet:
+        splittedText =(NSMutableArray*) [s_lyrics componentsSeparatedByCharactersInSet:
                         [NSCharacterSet characterSetWithCharactersInString:@"-/,;.!?\n "]];
         
         [splittedText removeObject:@""];
@@ -154,7 +154,6 @@
 
         NSDictionary *results = object;
         s_lyrics = [[results valueForKeyPath:@"message.body.lyrics.lyrics_body"] lowercaseString];
-        NSLog(@"%@",s_lyrics);
         return 1;
     }
     

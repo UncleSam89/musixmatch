@@ -29,7 +29,7 @@
     tracks = [[NSMutableArray alloc] init];
     
     spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    spinner.center = CGPointMake(160, 380);
+    spinner.center = CGPointMake(160, 300);
     spinner.tag = 12;
     [self.view addSubview:spinner];
 }
