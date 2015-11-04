@@ -11,7 +11,7 @@ Also the API account is a free one, so the lyrics is limited to the 30% of the e
 - Search your song with some keywords related to the title, the artist or the album
 - Select it from the list
 - In the details view you will able to see the level of difficulty via the colored bar under the album pic (green for easy, yellow for medium, red for hard and black if it's an instrumental song. The difficulty level is based on the number of unique words contained in the lyrics).
-- PLay it! Select the words in the right order (it will become green if the selection is correct). You'll get a +1 for each correct selection and a -1 for each wrong selection
+- Play it! Select the words in the right order (if the selection is correct it will become green). You'll get a +1 for each correct word and a -1 for each wrong word
 - At the end you will see your score and elapsed time
 
 WARNING :- The API requests are made with a simple HTTP GET method. Apple forbids to its application to use this kind of procedure for most REST API's.
