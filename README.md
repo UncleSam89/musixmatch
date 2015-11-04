@@ -13,3 +13,10 @@ This is a simple test-game on the API possibilities.
 For further information visit the link below
 
 Musixmatch API - https://developer.musixmatch.com
+
+
+#Further implementation
+
+- Deezer API implementation in order to reproduce the desired song while playing
+- Sync song and lyrics
+- Graphic design
