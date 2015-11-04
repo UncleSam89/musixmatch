@@ -66,7 +66,7 @@
 
 - (void)getDifficulty
 {
-    if(res == 0 || [s_lyrics length] == 0 || [s_lyrics  isEqual: @"INSTRUMENTAL"])
+    if(res == 0 || [s_lyrics length] == 0 || [s_lyrics  isEqual: @"instrumental"])
     {
         [difficultyLabel setBackgroundColor:[UIColor blackColor]];
        
@@ -99,7 +99,7 @@
 
 - (IBAction) startGame
 {
-    if(res == 0 || [s_lyrics length] == 0 || [s_lyrics  isEqual: @"INSTRUMENTAL"])
+    if(res == 0 || [s_lyrics length] == 0 || [s_lyrics  isEqual: @"instrumental"])
     {
         UIAlertController * alert=   [UIAlertController
                                       alertControllerWithTitle:@"Song error"
@@ -154,6 +154,7 @@
 
         NSDictionary *results = object;
         s_lyrics = [[results valueForKeyPath:@"message.body.lyrics.lyrics_body"] lowercaseString];
+        NSLog(@"%@",s_lyrics);
         return 1;
     }
     
