@@ -14,7 +14,7 @@ Also the API account is a free one, so the lyrics is limited to the 30% of the e
 - Play it! Select the words in the right order (if the selection is correct it will become green). You'll get a +1 for each correct word and a -1 for each wrong word
 - At the end you will see your score and elapsed time
 
-WARNING :- The API requests are made with a simple HTTP GET method. Apple forbids to its application to use this kind of procedure for most REST API's.
+WARNING :- The API requests are made with a simple HTTP GET method. Apple forbids this kind of procedure in the deployment fase; you can use it only in the development fase at your own risk.
 This is a simple test-game on the API possibilities made in few days, it's barely a prototype.
 
 For further information about Musixmatch and its API visit the link below
