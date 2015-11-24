@@ -23,7 +23,6 @@
 @synthesize album;
 @synthesize artist;
 @synthesize play;
-@synthesize difficultyLabel;
 @synthesize s_album;
 @synthesize s_trackName;
 @synthesize s_artist;
@@ -66,9 +65,20 @@
 
 - (void)getDifficulty
 {
+    UIView *circleView1 = [[UIView alloc] initWithFrame:CGRectMake(110.0, 315.0, 15.0, 15.0)];
+    UIView *circleView2 = [[UIView alloc] initWithFrame:CGRectMake(150.0, 315.0, 15.0, 15.0)];
+    UIView *circleView3 = [[UIView alloc] initWithFrame:CGRectMake(190.0, 315.0, 15.0, 15.0)];
+
+    [circleView1.layer setCornerRadius:7.5];
+    [circleView2.layer setCornerRadius:7.5];
+    [circleView3.layer setCornerRadius:7.5];
+
     if(res == 0 || [s_lyrics length] == 0 || [s_lyrics  isEqual: @"instrumental"])
     {
-        [difficultyLabel setBackgroundColor:[UIColor blackColor]];
+        [circleView1 setBackgroundColor:[UIColor whiteColor]];
+        [circleView2 setBackgroundColor:[UIColor whiteColor]];
+        [circleView3 setBackgroundColor:[UIColor whiteColor]];
+
        
     }
     else
@@ -86,15 +96,28 @@
         
         NSOrderedSet *orderedSet = [NSOrderedSet orderedSetWithArray:splittedText];
         
-        [difficultyLabel setBackgroundColor:[UIColor greenColor]];
+        [circleView1 setBackgroundColor:[UIColor greenColor]];
+        [circleView2 setBackgroundColor:[UIColor greenColor]];
+        [circleView3 setBackgroundColor:[UIColor greenColor]];
         
         if([orderedSet count] > 50)
-            [difficultyLabel setBackgroundColor:[UIColor yellowColor]];
+        {
+            [circleView1 setBackgroundColor:[UIColor yellowColor]];
+            [circleView2 setBackgroundColor:[UIColor yellowColor]];
+            [circleView3 setBackgroundColor:[UIColor yellowColor]];
+        }
         if([orderedSet count] > 100)
-            [difficultyLabel setBackgroundColor:[UIColor redColor]];
-        
+        {
+            [circleView1 setBackgroundColor:[UIColor redColor]];
+            [circleView2 setBackgroundColor:[UIColor redColor]];
+            [circleView3 setBackgroundColor:[UIColor redColor]];
+        }
+
     }
-    
+    [self.view addSubview:circleView1];
+    [self.view addSubview:circleView2];
+    [self.view addSubview:circleView3];
+
 }
 
 - (IBAction) startGame

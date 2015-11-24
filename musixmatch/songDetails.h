@@ -26,6 +26,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *album;
 @property (weak, nonatomic) IBOutlet UILabel *artist;
 @property (weak, nonatomic) IBOutlet UIButton *play;
-@property (strong, nonatomic) IBOutlet UIView *difficultyLabel;
 
 @end

@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you really know it all!?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="72w-Vu-jQp">
-                                <rect key="frame" x="37" y="372" width="246" height="66"/>
+                                <rect key="frame" x="37" y="448" width="246" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.62058056635957781" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -129,11 +129,6 @@
                                 <color key="textColor" red="1" green="0.62058056640000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pST-kT-ZJM">
-                                <rect key="frame" x="60" y="309" width="200" height="7"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.90980398650000005" blue="0.20000001789999999" alpha="1" colorSpace="deviceRGB"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3CE-W5-dO3">
                                 <rect key="frame" x="20" y="347" width="280" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -148,7 +143,6 @@
                     <connections>
                         <outlet property="album" destination="vUF-q4-VhD" id="SVI-Aj-82R"/>
                         <outlet property="artist" destination="uJL-dK-3cV" id="0ad-wh-rD5"/>
-                        <outlet property="difficultyLabel" destination="pST-kT-ZJM" id="8s7-KU-avk"/>
                         <outlet property="img" destination="XPL-ky-pQW" id="Wkh-L7-B6X"/>
                         <outlet property="play" destination="Ja3-iv-YOS" id="4eq-Rw-57y"/>
                         <outlet property="trackName" destination="3CE-W5-dO3" id="TZO-4O-zU2"/>
