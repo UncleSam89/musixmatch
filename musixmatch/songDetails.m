@@ -165,7 +165,7 @@
     if ([segue.identifier isEqualToString:@"toPlay"]) {
         PlayViewController *destViewController = segue.destinationViewController;
         destViewController.currentWords = splittedText;
-
+        destViewController.final_img = s_img;
     }
 }
 

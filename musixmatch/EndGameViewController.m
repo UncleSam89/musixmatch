@@ -19,9 +19,11 @@
 @synthesize timeTotal;
 @synthesize time;
 @synthesize score;
+@synthesize bck_img;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [[UIColor colorWithPatternImage:[UIImage imageWithData:bck_img]] colorWithAlphaComponent:0.5f];
     [self.navigationItem setHidesBackButton:YES];
     timeTotal.text = time;
     scoreTotal.text = score;

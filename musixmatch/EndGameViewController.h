@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeTotal;
 @property (weak, nonatomic) IBOutlet UIButton *playAgainButton;
 @property (weak, nonatomic) IBOutlet UIButton *searchSongButton;
+@property (nonatomic, strong) NSData *bck_img;
 
 @property (weak, nonatomic) NSString *time;
 @property (weak, nonatomic) NSString *score;

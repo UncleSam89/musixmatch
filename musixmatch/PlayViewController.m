@@ -27,22 +27,26 @@
 @synthesize currentButtons;
 @synthesize scoreLabel;
 @synthesize timeLabel;
+@synthesize final_img;
+@synthesize bck_label;
+@synthesize progressBar;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [bck_label setBackgroundColor:[[UIColor colorWithPatternImage:[UIImage imageWithData:final_img]] colorWithAlphaComponent:0.5f]];
+    progressBar.progress = 0.0f;
+    [progressBar setTransform:CGAffineTransformMakeScale(1.0, 3.0)];
     seconds = 0;
     minutes = 0;
     counter = 0;
     score = 0;
     currentButtons = [[NSMutableArray alloc] init];
-    currentWordsBackUp = [[NSMutableArray alloc] init];
 }
 
 -(void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    currentWordsBackUp = currentWords;
+    currentWordsBackUp = [[NSMutableArray alloc] initWithArray:currentWords copyItems:YES];
     t=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showTimer) userInfo:nil repeats:YES];
     
     [self createButtons];
@@ -51,7 +55,7 @@
 -(void) viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    currentWords = currentWordsBackUp;
+    currentWords = [[NSMutableArray alloc] initWithArray:currentWordsBackUp copyItems:YES];
     for(UIButton *b in currentButtons)
         [b removeFromSuperview];
     [self reloadInputViews];
@@ -113,7 +117,10 @@
         button.layer.cornerRadius = 5;
         button.clipsToBounds = YES;
         [button.layer setBorderWidth:1.0];
-        [button.layer setBorderColor:[[UIColor lightGrayColor] CGColor]];
+        [button.layer setBorderColor:[[UIColor orangeColor] CGColor]];
+        [button setBackgroundColor:[UIColor blackColor]];
+
+        [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         
         [button addTarget:self action:@selector(buttonPressed:)
          forControlEvents:UIControlEventTouchUpInside];
@@ -129,11 +136,13 @@
 
 - (void)buttonPressed:(UIButton *)button {
     
+    
     if(button.titleLabel.text ==currentWords[0])
     {
         [currentWords removeObjectAtIndex:0];
         counter--;
-        [button setBackgroundColor:[UIColor greenColor ]];
+        [button setBackgroundColor:[UIColor orangeColor ]];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         score++;
     }
     else
@@ -142,9 +151,15 @@
     }
     
     scoreLabel.text = [NSString stringWithFormat:@"%02ld",(long)score];
+    
+    float cap = [currentWordsBackUp count];
+    float current = [currentWords count];
+    progressBar.progress = 1.0f - (current/cap);
 
+    
     if(!counter)
     {
+        [self closeGame];
         [self createButtons];
     }
 }
@@ -163,6 +178,7 @@
         EndGameViewController *destViewController = segue.destinationViewController;
         destViewController.score = scoreLabel.text;
         destViewController.time = timeLabel.text;
+        destViewController.bck_img = final_img;
     }
 }
  

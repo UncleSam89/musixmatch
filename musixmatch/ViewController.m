@@ -23,14 +23,19 @@
 
 @synthesize  searchButton;
 @synthesize textSearchField;
+@synthesize image_label;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     tracks = [[NSMutableArray alloc] init];
-    
+    [self.navigationItem setHidesBackButton:YES];
+    [image_label setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"karaoke2.png"]]];
+
+
     spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     spinner.center = CGPointMake(160, 300);
     spinner.tag = 12;
+    spinner.color = [UIColor orangeColor];
     [self.view addSubview:spinner];
 }
 

@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UITextField *textSearchField;
+@property (weak, nonatomic) IBOutlet UILabel *image_label;
 
 
 

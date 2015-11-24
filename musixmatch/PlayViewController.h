@@ -12,9 +12,12 @@
 
 @property (nonatomic, strong) NSMutableArray *currentWords;
 @property (nonatomic, strong) NSMutableArray *currentButtons;
+@property (nonatomic, strong) NSData *final_img;
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bck_label;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
 
 -(void) createButtons;
 -(void) closeGame;
