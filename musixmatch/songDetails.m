@@ -30,9 +30,10 @@
 @synthesize s_lyrics;
 @synthesize s_id;
 @synthesize splittedText;
+@synthesize cover;
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    
     
     splittedText = [[NSMutableArray alloc] init];
     img.image = [UIImage imageWithData:s_img];
@@ -40,8 +41,11 @@
     artist.text = s_artist;
     trackName.text=s_trackName;
     
+    cover.layer.masksToBounds = YES;
+    cover.layer.cornerRadius = 5.0f;
     [self retrieveLyrics];
     [self getDifficulty];
+    [super viewDidLoad];
     
 }
 
@@ -65,9 +69,9 @@
 
 - (void)getDifficulty
 {
-    UIView *circleView1 = [[UIView alloc] initWithFrame:CGRectMake(110.0, 315.0, 15.0, 15.0)];
-    UIView *circleView2 = [[UIView alloc] initWithFrame:CGRectMake(150.0, 315.0, 15.0, 15.0)];
-    UIView *circleView3 = [[UIView alloc] initWithFrame:CGRectMake(190.0, 315.0, 15.0, 15.0)];
+    UIView *circleView1 = [[UIView alloc] initWithFrame:CGRectMake(110.0, 450.0, 15.0, 15.0)];
+    UIView *circleView2 = [[UIView alloc] initWithFrame:CGRectMake(150.0, 450.0, 15.0, 15.0)];
+    UIView *circleView3 = [[UIView alloc] initWithFrame:CGRectMake(190.0, 450.0, 15.0, 15.0)];
 
     [circleView1.layer setCornerRadius:7.5];
     [circleView2.layer setCornerRadius:7.5];

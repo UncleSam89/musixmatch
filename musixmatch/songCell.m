@@ -14,10 +14,10 @@
 @synthesize trackArtist = _trackArtist;
 @synthesize trackAlbum = _trackAlbum;
 @synthesize trackImage = _trackImage;
-
+@synthesize back;
 
 - (void)awakeFromNib {
-    // Initialization code
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

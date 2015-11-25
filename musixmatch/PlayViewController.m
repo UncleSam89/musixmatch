@@ -118,7 +118,8 @@
         button.clipsToBounds = YES;
         [button.layer setBorderWidth:1.0];
         [button.layer setBorderColor:[[UIColor orangeColor] CGColor]];
-        [button setBackgroundColor:[UIColor blackColor]];
+        //[button setBackgroundColor:[UIColor blackColor]];
+        [button setBackgroundColor:nil];
 
         [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         

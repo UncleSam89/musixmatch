@@ -9,6 +9,7 @@
 #import "SongsTableViewController.h"
 #import "songCell.h"
 #import "songDetails.h"
+#import "QuartzCore/QuartzCore.h"
 
 @interface SongsTableViewController ()
 
@@ -19,10 +20,13 @@
     bool lockResults;
 }
 
+@synthesize back;
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,12 +66,13 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"songCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    
+    cell.back.layer.masksToBounds = YES;
+    cell.back.layer.cornerRadius = 5.0f;
     cell.trackName.text = [[_tracks objectAtIndex:indexPath.row] valueForKey:@"track"] ;
     cell.trackArtist.text = [[_tracks objectAtIndex:indexPath.row] valueForKey:@"artist"] ;
     cell.trackAlbum.text = [[_tracks objectAtIndex:indexPath.row] valueForKey:@"album"] ;
     cell.trackImage.image = [UIImage imageWithData: [[_tracks objectAtIndex:indexPath.row] valueForKey:@"img"]];
-    
+
     return cell;
 }
 

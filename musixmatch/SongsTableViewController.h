@@ -10,6 +10,7 @@
 
 @interface SongsTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UILabel *back;
 
 @property NSMutableArray *tracks;
 
