@@ -18,6 +18,8 @@
 @property (nonatomic, strong) NSData *s_img;
 @property (nonatomic, strong) NSMutableArray *splittedText;
 
+
+
 -(void) retrieveLyrics;
 - (IBAction) startGame;
 

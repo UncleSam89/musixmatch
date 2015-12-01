@@ -20,7 +20,7 @@
     int minutes;
     NSTimer *t;
     int pivot;
-
+    CGFloat width;
     NSMutableArray *currentWordsBackUp;
 }
 @synthesize currentWords;
@@ -40,6 +40,7 @@
     minutes = 0;
     counter = 0;
     score = 0;
+    width = CGRectGetWidth(self.view.bounds)/2;
     currentButtons = [[NSMutableArray alloc] init];
 }
 
@@ -113,7 +114,7 @@
         int v = ((int)[n intValue]*70)+200;
         
         button.frame = CGRectMake(0,0,100,40);
-        button.center = CGPointMake(320/2, v);
+        button.center = CGPointMake(width, v);
         button.layer.cornerRadius = 5;
         button.clipsToBounds = YES;
         [button.layer setBorderWidth:1.0];

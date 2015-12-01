@@ -16,6 +16,7 @@
 @implementation songDetails
 {
     int res;
+    CGFloat width;
 }
 
 @synthesize img;
@@ -41,8 +42,8 @@
     artist.text = s_artist;
     trackName.text=s_trackName;
     
-    cover.layer.masksToBounds = YES;
-    cover.layer.cornerRadius = 5.0f;
+    //cover.layer.masksToBounds = YES;
+    //cover.layer.cornerRadius = 5.0f;
     [self retrieveLyrics];
     [self getDifficulty];
     [super viewDidLoad];
@@ -53,6 +54,8 @@
     [super didReceiveMemoryWarning];
 
 }
+
+
 
 
 - (void)retrieveLyrics
@@ -69,10 +72,16 @@
 
 - (void)getDifficulty
 {
-    UIView *circleView1 = [[UIView alloc] initWithFrame:CGRectMake(110.0, 450.0, 15.0, 15.0)];
-    UIView *circleView2 = [[UIView alloc] initWithFrame:CGRectMake(150.0, 450.0, 15.0, 15.0)];
-    UIView *circleView3 = [[UIView alloc] initWithFrame:CGRectMake(190.0, 450.0, 15.0, 15.0)];
-
+   
+    CGFloat centerx = CGRectGetWidth(self.view.bounds)/2;
+    CGFloat centery = CGRectGetMidY(cover.frame) - 7;
+    
+    
+    UIView *circleView1 = [[UIView alloc] initWithFrame:CGRectMake(centerx-35, centery, 14.0, 14.0)];
+    UIView *circleView2 = [[UIView alloc] initWithFrame:CGRectMake(centerx-7, centery, 14.0, 14.0)];
+    UIView *circleView3 = [[UIView alloc] initWithFrame:CGRectMake(centerx+20, centery, 14.0, 14.0)];
+        
+    
     [circleView1.layer setCornerRadius:7.5];
     [circleView2.layer setCornerRadius:7.5];
     [circleView3.layer setCornerRadius:7.5];
