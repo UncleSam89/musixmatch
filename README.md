@@ -2,8 +2,8 @@
 
 A simple game based of Musixmatch's API for iOS 7 and above; tested for iPhone 5/6/6s screen settings.
 
-Chose a song and try to select the words in the correct sequence in the minor time.
-This is a simple test on the API; some crash can occur and also there's no graphic design.
+Chose a song and try to select the words in the correct sequence in the minor time possible.
+This is a simple test on the API; some crash can occur.
 Also the API account is a free one, so the lyrics is limited to the 30% of the entire song.
 
 #How it works
