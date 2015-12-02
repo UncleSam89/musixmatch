@@ -24,5 +24,6 @@ Musixmatch API - https://developer.musixmatch.com
 
 #Further implementation
 
+- Fix background image resize for different screen size
 - Deezer API implementation in order to reproduce the desired song while playing
 - Sync song and lyrics
